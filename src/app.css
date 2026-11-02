@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+
+/* Farbpalette und Schriftarten des Boards */
+@theme {
+	--color-paper: #f5f4ff;
+	--color-card: #ffffff;
+	--color-ink: #292746;
+	--color-ink-soft: #77758f;
+	--color-line: #e7e5f2;
+
+	--color-lane-do: #7c75d8;
+	--color-lane-doing: #d39a48;
+	--color-lane-done: #4f9b83;
+	--color-lane-archiv: #9997aa;
+
+	--color-prio-low: #76a995;
+	--color-prio-medium: #d9a64d;
+	--color-prio-high: #d66c79;
+
+	--color-warn: #c94f68;
+	--color-warn-bg: #fff0f2;
+
+	--font-serif: 'Inter', system-ui, sans-serif;
+	--font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+:root {
+	font-family: var(--font-sans);
+	color: var(--color-ink);
+	background: var(--color-paper);
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	min-width: 320px;
+	min-height: 100vh;
+	margin: 0;
+	background:
+		radial-gradient(ellipse at 8% 0%, rgba(190, 185, 255, 0.24), transparent 36rem),
+		radial-gradient(ellipse at 92% 8%, rgba(255, 220, 190, 0.2), transparent 32rem),
+		var(--color-paper);
+}
+
+button, input, textarea, select {
+	font: inherit;
+}
+
+button {
+	transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+button:active {
+	transform: translateY(1px);
+}
+
+::selection {
+	color: #292746;
+	background: #dedbff;
+}
